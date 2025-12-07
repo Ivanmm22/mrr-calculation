@@ -1,8 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { SCENARIOS } from '../data';
 import { calculateMRRLogic, formatCurrency } from '../utils';
-import { CalculationResult, Opportunity } from '../types';
-import { Check, ChevronRight, RefreshCcw, AlertCircle } from 'lucide-react';
+import { CalculationResult } from '../types';
+
+// Inline Icons
+const ChevronRight = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="m9 18 6-6-6-6"/></svg>
+);
+const Check = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polyline points="20 6 9 17 4 12"/></svg>
+);
+const AlertCircle = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
+);
 
 const PracticeMode: React.FC = () => {
   const [currentScenarioIndex, setCurrentScenarioIndex] = useState(0);
