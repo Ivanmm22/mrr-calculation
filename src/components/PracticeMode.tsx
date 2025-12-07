@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { SCENARIOS } from '../data';
 import { calculateMRRLogic, formatCurrency } from '../utils';
-import { CalculationResult } from '../types';
+import { type CalculationResult } from '../types';
 
 // Inline Icons
 const ChevronRight = ({ className }: { className?: string }) => (
